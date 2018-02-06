@@ -33,13 +33,22 @@ document.addEventListener ('DOMContentLoaded', function () {
 		box.appendChild(boxText);
 		boxFrame.appendChild(box);	
 
-        //Add double click event listener
+        //Add double click event listener and remove box function
         box.addEventListener('dblclick', function () {
-            if (event.target.id % 2 == 0) {
-                alert('This is even!');
-            } else {
-                alert('This is odd!');
-            }            
+                
+             if (box.id % 2 == 0) {
+                 if(box.nextSibling) {
+                    box.nextSibling.remove();
+                 } else {
+                     alert('No more elements to the right to remove!');
+                 }
+             } else {
+                 if (box.previousSibling) {
+                    box.previousSibling.remove();
+                 } else {
+                     alert('No more elements to the left to remove!');
+                 }
+             }
         });
 
         //Changing box background color on click 
