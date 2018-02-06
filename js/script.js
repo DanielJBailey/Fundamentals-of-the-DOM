@@ -35,9 +35,11 @@ document.addEventListener ('DOMContentLoaded', function () {
 
         //Add double click event listener
         box.addEventListener('dblclick', function () {
-                
-                // HOW TO SELECT CURRENT BOX ID ON CLICK?
-            
+            if (event.target.id % 2 == 0) {
+                alert('This is even!');
+            } else {
+                alert('This is odd!');
+            }            
         });
 
         //Changing box background color on click 
