@@ -33,19 +33,24 @@ document.addEventListener ('DOMContentLoaded', function () {
 		box.appendChild(boxText);
 		boxFrame.appendChild(box);	
 
-        
+        //Add double click event listener
+        box.addEventListener('dblclick', function () {
+                
+                // HOW TO SELECT CURRENT BOX ID ON CLICK?
+            
+        });
 
         //Changing box background color on click 
 		box.addEventListener ('click', function() {
 			box.style.backgroundColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 		});
 
-        //Hover effect to show box id
+        //Hover effect to show box id #
 		box.addEventListener('mouseover', function() {
 		    boxText.style.display = 'block';
 		});
 
-        //
+        //Remove hover effect upon mouse leave to hide box id #
 		box.addEventListener('mouseleave',function() {
 		    boxText.style.display = 'none';
 		});

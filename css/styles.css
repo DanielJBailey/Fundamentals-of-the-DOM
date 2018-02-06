@@ -25,6 +25,7 @@ body
     transition: 0.3s;
     cursor: pointer;
     display: block;
+    box-shadow: 2px 2px 4px #636e72;
 }
 
 .box-frame
@@ -59,6 +60,7 @@ body
     clear: both;
     border-radius: 3px;
     cursor: pointer;
+    box-shadow: 2px 2px 4px #636e72;
 }
 
 #boxFont
